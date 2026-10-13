@@ -1,0 +1,4 @@
+# Test tooling shared by every project in this repo. Each project keeps its own
+# runtime deps in <project>/scripts/requirements.txt.
+pytest>=8
+pytest-mock>=3

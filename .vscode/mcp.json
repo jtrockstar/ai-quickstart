@@ -1,0 +1,15 @@
+{
+  // Atlassian (Jira) MCP server. The AI agent uses this to read and write Jira
+  // issues (search / get / create / update / transition / comment).
+  // Credentials load from the gitignored repo-root .env via "envFile":
+  // JIRA_URL, JIRA_USERNAME (account email), JIRA_API_TOKEN.
+  // Prereq: `uv` installed (provides `uvx`).
+  "servers": {
+    "jira": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": ["mcp-atlassian"],
+      "envFile": "${workspaceFolder}/.env"
+    }
+  }
+}

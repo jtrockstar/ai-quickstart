@@ -1,0 +1,16 @@
+{
+  // Used when this folder is opened on its own. In a multi-root workspace, VS Code
+  // ignores window-level settings (like chat.promptFilesLocations) here; the
+  // workspace file carries them instead.
+  "chat.promptFilesLocations": {
+    ".github/prompts": true,
+    "jira-toolkit/prompts": true
+  },
+  // Agent instructions live in AGENTS.md at the repo root.
+  "chat.useAgentsMdFile": true,
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+  "python.terminal.activateEnvironment": true,
+  "terminal.integrated.env.windows": {
+    "PYTHONUNBUFFERED": "1"
+  }
+}
