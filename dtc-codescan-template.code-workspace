@@ -1,0 +1,44 @@
+{
+  "folders": [
+    { "path": "." }
+    // Add sibling repos here, e.g. { "path": "../another-repo" }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+    "python.terminal.activateEnvironment": true,
+    // Window-scoped: only honored here once the workspace is multi-root.
+    "chat.promptFilesLocations": {
+      ".github/prompts": true,
+      "jira-toolkit/prompts": true
+    },
+    // Agent instructions live in AGENTS.md at the repo root.
+    "chat.useAgentsMdFile": true,
+    // Live logs for long REST/test runs.
+    "terminal.integrated.env.windows": {
+      "PYTHONUNBUFFERED": "1"
+    },
+    // Only the venv's pytest on one project's tests (optionally logged) runs without approval.
+    "chat.tools.terminal.autoApprove": {
+      "/^(?:[A-Za-z]:\\\\[^\\s;&|]*\\\\)?\\.venv\\\\Scripts\\\\python\\.exe -m pytest [^\\s;&|]+\\\\tests( -q)?( -p no:cacheprovider)?( \\*>>? [^\\s;&|]+\\.log)?$/": {
+        "approve": true,
+        "matchCommandLine": true
+      }
+    },
+    // Keep generated data out of the watcher, search, and Pylance (still visible in Explorer).
+    "files.watcherExclude": {
+      "**/.venv/**": true,
+      "**/data/**": true,
+      "**/.scratch/**": true
+    },
+    "search.exclude": {
+      "**/.venv": true,
+      "**/data": true,
+      "**/.scratch": true
+    },
+    "python.analysis.exclude": [
+      "**/.venv",
+      "**/__pycache__",
+      "**/data"
+    ]
+  }
+}

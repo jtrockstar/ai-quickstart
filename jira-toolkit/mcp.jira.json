@@ -1,0 +1,15 @@
+{
+  // PORTABLE REFERENCE COPY of the Jira MCP server config.
+  // VS Code only loads the ACTIVE config from .vscode/mcp.json, so copy/merge this
+  // "jira" server block into that file. Credentials (JIRA_URL, JIRA_USERNAME,
+  // JIRA_API_TOKEN) load from the repo-root .env via "envFile" — no secrets are
+  // stored here or committed.
+  "servers": {
+    "jira": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": ["mcp-atlassian"],
+      "envFile": "${workspaceFolder}/.env"
+    }
+  }
+}
