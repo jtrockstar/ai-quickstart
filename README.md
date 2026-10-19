@@ -17,7 +17,7 @@ conventions end to end.
 | [jira-toolkit/](jira-toolkit/README.md) | Jira MCP config, sync prompt, and paced REST scripts (descriptions, story points, assignees, epic closure, ADR comments). |
 | [example-report/](example-report/README.md) | A working example project: config module, REST helper, date helper, CLI, and mocked tests. |
 | [.vscode/](.vscode/) | MCP server, prompt locations, interpreter, and recommended extensions. |
-| [dtc-codescan-template.code-workspace](dtc-codescan-template.code-workspace) | Workspace file for opening this repo (alone or with sibling repos). |
+| [ai-quickstart.code-workspace](ai-quickstart.code-workspace) | Workspace file for opening this repo (alone or with sibling repos). |
 | [.env.example](.env.example) | The settings `.env` needs (copy to `.env`, which is gitignored). |
 
 ## Quick start
