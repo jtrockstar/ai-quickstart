@@ -1,4 +1,4 @@
-# dtc-codescan-template
+# ai-quickstart
 
 A template repo that packages how we work: the working agreements for people and AI agents,
 a complete documentation set with filled examples and blank templates, a portable Jira
